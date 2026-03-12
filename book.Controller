@@ -1,0 +1,10 @@
+# الحصول على جميع الكتب
+curl http://localhost:5000/api/v1/books
+
+# البحث عن كتاب
+curl http://localhost:5000/api/v1/books/search?q=روايات
+
+# إنشاء كتاب جديد
+curl -X POST http://localhost:5000/api/v1/books \
+  -H "Content-Type: application/json" \
+  -d '{"title":"كتاب جديد","author":"محمد","description":"وصف","filePath":"/books/test.pdf","category":"روايات","language":"ar","publishDate":"2023-12-01"}'
